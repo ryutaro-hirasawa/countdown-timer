@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <title>Countdown Timer</title>
+    <meta name='viewport' content='user-scalable=no,width=device-width,initial-scale=1'>
+    <script src='./timer.js?20200817' type='text/javascript'></script>
+    <link rel='stylesheet' type='text/css' href='./timer.css?20200812' media='all'>
+  </head>
+  <body width='100%' id='mainArea'>
+    <div class='block1'>
+      <div class='blockA'>
+        <input type='text' value='0' id='d0' class='setNum' readonly onclick='chgSign()'><br />
+        <input type='button' value='7' id='k7' class='numKey' onclick='setNum(7)'><input type='button' value='8' id='k8' class='numKey' onclick='setNum(8)'><input type='button' value='9' id='k9' class='numKey' onclick='setNum(9)'><br />
+        <input type='button' value='4' id='k4' class='numKey' onclick='setNum(4)'><input type='button' value='5' id='k5' class='numKey' onclick='setNum(5)'><input type='button' value='6' id='k6' class='numKey' onclick='setNum(6)'><br />
+        <input type='button' value='1' id='k1' class='numKey' onclick='setNum(1)'><input type='button' value='2' id='k2' class='numKey' onclick='setNum(2)'><input type='button' value='3' id='k3' class='numKey' onclick='setNum(3)'><br />
+        <input type='button' value='0' id='k0' class='numKey' onclick='setNum(0)'><input type='button' value='.' id='kp' class='numKey' onclick='setNum(".")'><input type='button' value='C' id='kr' class='numKey clearButton' onclick='reset()'><br />
+
+        <input type='button' value='時間' class='numKey timeButton' onclick='addTotal("h")' id='kh'><input type='button' value='分' class='numKey timeButton' onclick='addTotal("m")' id='km'><input type='button' value='秒' class='numKey timeButton' onclick='addTotal("s")' id='ks'><br />
+      </div>
+      <br />
+      <div class='blockB'>
+        <input type='text' value='0:00:00.0' id='d1' class='progressTime' readonly>
+
+        <div id='progressArea'>
+          <span id='progressBar'></span>
+        </div>
+
+        <span class='buttonArea'>
+          <input type='button' value='リセット' id='kac' class='resetButton' onclick='allClear()'>
+          <input type='button' value='スタート' id='kss' class='startButton' onclick='countStart()'>
+        </span>
+      </div>
+    </div>
+    <input type='button' value='' id='krs' class='resumeButton'>
+    
+    <!-- scriptタグを入力 8/17(月)-->
+
+    <input type='button' id='dummy' style='position: fixed; opacity: 0;'>
+    <!-- scriptタグを入力 8/17(月)-->
+    
+  </body>
+</html>
