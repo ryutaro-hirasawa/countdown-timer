@@ -6,7 +6,7 @@
     <script src='./timer.js?20200817' type='text/javascript'></script>
     <link rel='stylesheet' type='text/css' href='./timer.css?20200812' media='all'>
   </head>
-  <body width='100%' id='mainArea'>
+  <body width='100%' id='mainArea'>CountDown Timer!
     <div class='block1'>
       <div class='blockA'>
         <input type='text' value='0' id='d0' class='setNum' readonly onclick='chgSign()'><br />
@@ -33,10 +33,27 @@
     </div>
     <input type='button' value='' id='krs' class='resumeButton'>
     
-    <!-- scriptタグを入力 8/17(月)-->
+    <script type='text/javascript'>
+      var windowAudioContext = window.AudioContext || window.webkitAudioContext;
+      if (windowAudioContext === undefined) {
+        var audioTag = ''+
+        '<audio id="seClick" preload="auto">'+
+        '   <source src="sound/click.mp3" type="audio/mp3">'+
+        '</audio>'+
+        '<audio id="seAlarm" preload="auto">'+
+        '   <source src="sound/alarm.mp3" type="audio/mp3">'+
+        '</audio>'+
+        ''; 
+        document.write(audioTag);
+      }
+    </script>
 
     <input type='button' id='dummy' style='position: fixed; opacity: 0;'>
-    <!-- scriptタグを入力 8/17(月)-->
+    
+    <span style='display:none;'>
+    <input type ='button' id='button' id='se1' value='se1'>
+    <input type ='button' id='button' id='se2' value='se2'>
+    </span> 
     
   </body>
 </html>
